@@ -23,7 +23,6 @@ stdenv.mkDerivation {
         tar -xvzf ${src.out} -C $JDK_PATH
     fi
 
-    echo ${mavenSrc.out}
     if [ ! -d "$MAVEN_PATH" ]; then
       mkdir -p $MAVEN_PATH && \
         tar -xvzf ${mavenSrc.out} -C $MAVEN_PATH
