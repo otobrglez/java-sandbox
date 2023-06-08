@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <groupId>com.pinkstack</groupId>
+  <artifactId>java-sandbox</artifactId>
+  <version>0.0.1</version>
+ 
+  <properties>
+    <maven.compiler.release>21</maven.compiler.release>
+    <java.version>21</java.version>
+  </properties>
+   
+  <build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <enablePreview>true</enablePreview>
+                    <source>21</source>
+                    <target>21</target>
+                    <release>21</release>
+                    <compilerArgs>--enable-preview</compilerArgs>
+                    <compilerArgs>-Xlint:all</compilerArgs>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.pinkstack.HelloStrings</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+  </build>
+
+  <dependencies>
+    <!--
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    -->
+  </dependencies>
+</project>

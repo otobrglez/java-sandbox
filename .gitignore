@@ -1,0 +1,4 @@
+target/
+.envrc
+.open-jdk-21
+.maven
